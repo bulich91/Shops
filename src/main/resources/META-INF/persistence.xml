@@ -1,0 +1,20 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="shopsEntityManager">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>ru.iac.shops.entity.Product</class>
+        <class>ru.iac.shops.entity.Shop</class>
+        <class>ru.iac.shops.entity.Transaction</class>
+        <properties>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+            <property name="hibernate.connection.url" value="jdbc:postgresql://127.0.0.1:5432/shops"/>
+            <property name="hibernate.connection.username" value="postgres"/>
+            <property name="hibernate.connection.password" value="postgres"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL81Dialect" />
+            <property name="hibernate.show_sql" value = "true" />
+            <property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE"/>
+        </properties>
+    </persistence-unit>
+</persistence>
