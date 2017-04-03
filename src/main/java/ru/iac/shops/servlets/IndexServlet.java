@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * Сервлет, который обрабатывает входные запросы
  * @author Bulich Artem
  */
 @WebServlet(
@@ -17,7 +18,6 @@ public class IndexServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, java.io.IOException {
-
         request.setCharacterEncoding("UTF-8");
         request.getRequestDispatcher("/index.jsp").include(request, response);
     }

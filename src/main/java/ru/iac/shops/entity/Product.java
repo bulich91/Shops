@@ -18,7 +18,8 @@ public class Product {
     @Column(name = "name", nullable = false)
     private String name;
 
-    public Product() {    }
+    public Product() {
+    }
 
     public Product(long id, String name) {
         this.id = id;
